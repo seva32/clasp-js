@@ -1,0 +1,28 @@
+{
+  "name": "pamed-glasp",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "glogin": "clasp login",
+    "glogout": "clasp logout",
+    "gcreate": "clasp create --title 'PamedGlasp' --rootDir ./apps-script",
+    "gclone": "clasp clone \"1nbj0Dln0oPHv8w64B9zQKD3xDypBoer-J8JFP1z0KEWndzSE6nX-RsR9\" --rootDir ./apps-script",
+    "gpush": "clasp push",
+    "gpull": "clasp pull",
+    "gstart": "clasp push --watch",
+    "parcel": "parcel build client/index.html --no-source-maps --no-cache && node util.js && npm run gpush",
+    "start": "nodemon --watch client --watch server --exec \"npm run parcel\" --ext js,html,scss,css"
+  
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@google/clasp": "^2.4.2",
+    "@parcel/transformer-sass": "2.8.3",
+    "@types/google-apps-script": "^1.0.57",
+    "parcel": "^2.8.3",
+    "posthtml": "^0.16.6",
+    "sass": "^1.58.0"
+  }
+}
